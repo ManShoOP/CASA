@@ -1,0 +1,151 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
+
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-primary-light: hsl(var(--primary-light));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  /* Custom Theme Colors (CASA SOL) */
+  --color-terracotta-50: #fdf6f4;
+  --color-terracotta-100: #f9eae4;
+  --color-terracotta-200: #f2d6ca;
+  --color-terracotta-300: #e8b8a5;
+  --color-terracotta-400: #db9177;
+  --color-terracotta-500: #cd6f50;
+  --color-terracotta-600: #c0522a;
+  --color-terracotta-700: #a14022;
+  --color-terracotta-800: #843720;
+  --color-terracotta-900: #6d2f1d;
+  --color-terracotta-950: #3a160c;
+
+  --color-cream-light: #FDFAF5;
+  --color-cream-DEFAULT: #F5EFE3;
+  --color-cream-dark: #E0D5C5;
+
+  --color-charcoal-light: #3A3A36;
+  --color-charcoal-DEFAULT: #1C1C1A;
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+}
+
+@layer base {
+  :root {
+    --background: 42 66% 96%; /* cream-light #FDFAF5 */
+    --foreground: 60 4% 11%; /* charcoal #1C1C1A */
+    
+    --card: 42 66% 96%;
+    --card-foreground: 60 4% 11%;
+    
+    --popover: 42 66% 96%;
+    --popover-foreground: 60 4% 11%;
+    
+    --primary: 16 64% 46%; /* terracotta #C0522A */
+    --primary-foreground: 42 66% 96%; /* cream-light */
+    --primary-light: 21 65% 54%; /* warm orange #D4713D */
+    
+    --secondary: 40 37% 92%; /* cream #F5EFE3 */
+    --secondary-foreground: 60 4% 11%;
+    
+    --muted: 40 37% 92%;
+    --muted-foreground: 25 6% 39%; /* warm gray #6B6560 */
+    
+    --accent: 16 64% 46%;
+    --accent-foreground: 42 66% 96%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 35 34% 83%; /* sand #E0D5C5 */
+    --input: 35 34% 83%;
+    --ring: 16 64% 46%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 60 4% 11%; /* charcoal #1C1C1A */
+    --foreground: 42 66% 96%; /* cream-light */
+    
+    --card: 60 4% 11%;
+    --card-foreground: 42 66% 96%;
+    
+    --popover: 60 4% 11%;
+    --popover-foreground: 42 66% 96%;
+    
+    --primary: 16 64% 46%; /* terracotta */
+    --primary-foreground: 42 66% 96%;
+    --primary-light: 21 65% 54%;
+    
+    --secondary: 60 4% 17%;
+    --secondary-foreground: 42 66% 96%;
+    
+    --muted: 60 4% 17%;
+    --muted-foreground: 35 34% 83%;
+    
+    --accent: 16 64% 46%;
+    --accent-foreground: 42 66% 96%;
+    
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 42 66% 96%;
+    
+    --border: 60 4% 20%;
+    --input: 60 4% 20%;
+    --ring: 16 64% 46%;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
+}
