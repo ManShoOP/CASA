@@ -1,7 +1,11 @@
 ﻿import { createBrowserClient } from '@supabase/ssr'
 
+const SUPABASE_URL = 'https://aijbctuvavvolzdemdvr.supabase.co'
+const SUPABASE_KEY = 'ใส่_KEY_ที่เพิ่งกอปมาตรงนี้'
+
 export function createClient() {
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://geexqvbxvpkxnfnjcvzk.supabase.co'
-  const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'sb_publishable_9VbHaihzlOnYd9Aa-02EMg_g90ydYH3'
-  return createBrowserClient(supabaseUrl, supabaseKey)
+  return createBrowserClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL ?? SUPABASE_URL,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? SUPABASE_KEY
+  )
 }

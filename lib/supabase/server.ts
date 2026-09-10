@@ -1,8 +1,8 @@
 ﻿import { createServerClient } from '@supabase/ssr'
 import { cookies } from 'next/headers'
 
-const SUPABASE_URL = 'https://geexqvbxvpkxnfnjcvzk.supabase.co'
-const SUPABASE_KEY = 'sb_publishable_9VbHaihzlOnYd9Aa-02EMg_g90ydYH3'
+const SUPABASE_URL = 'https://aijbctuvavvolzdemdvr.supabase.co'
+const SUPABASE_KEY = 'ใส่_KEY_ที่เพิ่งกอปมาตรงนี้'
 
 export async function createClient() {
   const cookieStore = await cookies()
