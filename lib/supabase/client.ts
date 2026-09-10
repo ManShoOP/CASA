@@ -1,7 +1,7 @@
 ﻿import { createBrowserClient } from '@supabase/ssr'
 
 const SUPABASE_URL = 'https://aijbctuvavvolzdemdvr.supabase.co'
-const SUPABASE_KEY = 'ใส่_KEY_ที่เพิ่งกอปมาตรงนี้'
+const SUPABASE_KEY = 'sb_publishable_9VbHaihzlOnYd9Aa-02EMg_g90ydYH3'
 
 export function createClient() {
   return createBrowserClient(
